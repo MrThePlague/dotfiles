@@ -26,12 +26,10 @@ nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>")
 vmap <BS> "-d
 let &cpo=s:cpo_save
 unlet s:cpo_save
-syntax on
 filetype plugin indent on
 set relativenumber
 set number
 set autoindent
-set background=dark
 set backspace=indent,eol,start
 set fileencodings=ucs-bom,utf-8,default,latin1
 set guifont=Source\ Code\ Pro:h13
@@ -45,7 +43,6 @@ set window=52
 set backup
 set backupdir=/private/tmp/
 set dir=/private/tmp/
-colorscheme slate
 " vim: set ft=vim :
 execute pathogen#infect()
 
@@ -59,3 +56,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 set t_Co=256
+
+syntax enable
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+colorscheme solarized
