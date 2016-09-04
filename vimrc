@@ -27,9 +27,15 @@ vmap <BS> "-d
 let &cpo=s:cpo_save
 unlet s:cpo_save
 filetype plugin indent on
+
+" Set tab to four spaces
+set softtabstop=4 shiftwidth=4 expandtab 
+set autoindent
+
+" Relative line numbers displayed
 set relativenumber
 set number
-set autoindent
+
 set backspace=indent,eol,start
 set fileencodings=ucs-bom,utf-8,default,latin1
 set guifont=Source\ Code\ Pro:h13
@@ -50,10 +56,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+
+
+
+
 
 set t_Co=256
 
