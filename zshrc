@@ -68,6 +68,8 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 
 source $ZSH/oh-my-zsh.sh
 
+DEFAULT_USER=`whoami`
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
